@@ -15,7 +15,7 @@ class PagesController extends Controller
      * Display the homepage.
      */
     public function home() {
-        $posts = PostsRepo::getPosts(10, 'owner');
+        $posts = PostsRepo::getPosts(20, 'owner');
         return view(config('theme.default.pages').'.index')->withPosts($posts);
     }
 

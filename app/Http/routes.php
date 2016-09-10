@@ -68,4 +68,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'authorized:view-dashboar
 | Auth Routes
 |--------------------------------------------------------------------------
 */
+
+Route::get('wishcallback','WishController@index');
+
 Route::auth();

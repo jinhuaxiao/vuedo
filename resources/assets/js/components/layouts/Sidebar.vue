@@ -8,7 +8,7 @@
       <div v-link="{ path: '/profile' }" class="user-panel">
         <div class="pull-left image">
           <img class="profile-user-img img-responsive img-circle"
-          :src="user.avatar" alt="User profile picture">
+          :src="user.avatar" alt="User profile pictu
         </div>
         <div class="pull-left info">
           <p>{{user.name}}</p>
@@ -28,6 +28,15 @@
           <ul class="treeview-menu">
             <li><a v-link="{ path: '/posts' }"><i class="fa fa-tasks"></i>Index</a></li>
             <li><a @click="createPost" href="#"><i class="fa fa-keyboard-o"></i>Create post</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-list"></i> <span>Products</span> <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+            <li><a v-link="{ path: '/products' }"><i class="fa fa-tasks"></i>Index</a></li>
+            <li><a @click="createProduct" href="#"><i class="fa fa-keyboard-o"></i>Create product</a></li>
           </ul>
         </li>
         <li><a v-link="{ path: '/categories' }"><i class="fa fa-th-large"></i> <span>Categories</span></a></li>
@@ -74,6 +83,22 @@ export default {
       } else {
         swal('Sorry', 'Please navigate elsewhere before creating new post.', 'info')
       }
+    },
+    createProduct () {
+    /*
+      if( !this.creatingPost ){
+        this.$http({url: '/api/product', method: 'POST'}).then(function (response) {
+          show_stack_info('Creating post...', response)
+          this.$router.go('/products/'  + response.data.hashid + '/edit')
+        }, function (response){
+               show_stack_error('Failed to create product!', response)
+             })
+      } else {
+        swal('Sorry', 'Please navigate elsewhere before creating new post.', 'info')
+      }
+      */
+        swal('Sorry', 'Please navigate elsewhere before creating new post.', 'info')
+    console.log('hi,lalala......');
     }
   }
 }

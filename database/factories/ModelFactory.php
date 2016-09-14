@@ -25,7 +25,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->defineAs(App\User::class, 'admin', function () use ($factory) {
     $user = $factory->raw(App\User::class);
 
-    return array_merge($user, ['role_level' => 9, 'password' => bcrypt('123pass')]);
+    return array_merge($user, ['role_level' => 9, 'password' => bcrypt('jinhua')]);
 });
 $factory->define(App\Role::class, function (Faker\Generator $faker) {
     return [

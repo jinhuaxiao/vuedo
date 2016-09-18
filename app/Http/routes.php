@@ -36,6 +36,11 @@ Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Api'], f
     Route::post('posts/{posts}/image', ['as' => 'api.posts.updateImage', 'uses' => 'PostsController@updateImage']);
     Route::resource('posts', 'PostsController', ['except' => ['create', 'edit']]);
 
+    //products
+    Route::post('products/{products}/publish', ['as' => 'api.products.publish', 'uses' => 'ProductsController@publish']);
+    Route::post('products/{products}/image', ['as' => 'api.products.updateImage', 'uses' => 'ProductsController@updateImage']);
+    Route::resource('products', 'ProductsController', ['except' => ['create', 'edit']]);
+
     //categories
     Route::resource('categories', 'CategoriesController', ['except' => ['create', 'edit']]);
 

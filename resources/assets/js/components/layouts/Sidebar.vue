@@ -85,7 +85,6 @@ export default {
       }
     },
     createProduct () {
-    /*
       if( !this.creatingPost ){
         this.$http({url: '/api/product', method: 'POST'}).then(function (response) {
           show_stack_info('Creating post...', response)
@@ -96,8 +95,6 @@ export default {
       } else {
         swal('Sorry', 'Please navigate elsewhere before creating new post.', 'info')
       }
-      */
-        swal('Sorry', 'Please navigate elsewhere before creating new post.', 'info')
     console.log('hi,lalala......');
     }
   }

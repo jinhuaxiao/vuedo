@@ -85,9 +85,9 @@ export default {
       }
     },
     createProduct () {
-      if( !this.creatingPost ){
+      if( !this.creatingProduct ){
         this.$http({url: '/api/product', method: 'POST'}).then(function (response) {
-          show_stack_info('Creating post...', response)
+          show_stack_info('Creating product...', response)
           this.$router.go('/products/'  + response.data.hashid + '/edit')
         }, function (response){
                show_stack_error('Failed to create product!', response)

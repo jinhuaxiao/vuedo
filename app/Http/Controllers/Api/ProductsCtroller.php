@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Post;
-use Parsedown;
+use App\Http\Controllers\Controller;
+
 class ProductsCtroller extends Controller
 {
     /**
@@ -17,12 +17,7 @@ class ProductsCtroller extends Controller
     public function index()
     {
         //
-        $Parsedown = new Parsedown();
-        foreach (Post::all() as $post) {
-            echo "<pre><h3>$post->id. $post->title</h3>";
-            echo $Parsedown->text($post->content);
-            echo "</pre>";
-        }
+        echo "hello";
     }
 
     /**
@@ -32,7 +27,7 @@ class ProductsCtroller extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        //
     }
 
     /**
@@ -43,10 +38,7 @@ class ProductsCtroller extends Controller
      */
     public function store(Request $request)
     {
-        $post = new Post($request->all());
-        $post->slug = str_slug($post->title);
-        $post->created_by = \Auth::id() || 1;
-        return redirect(route('post.index'));
+        //
     }
 
     /**

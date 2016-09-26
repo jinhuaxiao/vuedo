@@ -35,7 +35,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Acme\\": "app/Acme"
+            "Acme\\": "app/Acme",
+            "Wish\\": "lib/Wish"
         }
     },
     "autoload-dev": {

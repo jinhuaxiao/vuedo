@@ -5,7 +5,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>V</b>UE</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Vue.js</b> News</span>
+      <span class="logo-lg">dashboard</span>
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
